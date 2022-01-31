@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSE 442 Web Publishing Example</title>
+    <!-- For using vega-lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <!-- For using d3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+</head>
+<body>
+    <!-- Vega-Lite script demo -->
+    <section id = "vegaDemo">
+        <h3>Embed a Vega-Lite Visualization:</h3>
+        <div id="view"></div>
+      </section>
+    <!-- D3 script demo -->
+    <section id = "d3Demo">
+        <h3>Embed a D3 Visualization:</h3>
+        <div id="d3-demo"></div>
+    </section>
+    <!-- Observable embed demo -->
+    <section id = "vegaDemo">
+        <h3>Embed a visualization from Observable:</h3>
+        <div id="observablehq-embed-361fbf1c"></div>
+        <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/feefe37e62f2badb.js?v=3";
+        new Runtime().module(define, name => {
+          if (name === "embed") return new Inspector(document.querySelector("#observablehq-embed-361fbf1c"));
+        });
+        </script>
+      </section>
 
+    <script src="vegaDemo.js"></script>
+    <script src="d3Demo.js"></script>
+</body>
+</html>
